@@ -1,18 +1,15 @@
 // Start with an array of travel destinations. Print every travel destination in alphabetical order embedded in a sentence using string interpolation. For example, if the destination is "New York City", print something like "The next place I want to visit is New York City!" 
 
-// Overall goal: Use a function to remove all instances of "s" in a given string and return the same string with those characters removed.
-// 1. Create a string variable containing a sentence with multiple instances of "s" character.
-// 2. Write a function that accepts a string as parameter.
-// 3. Within the function, define a local variable called newString and assign its value to the string without the "s" characters. 
-// 4. To do this, research methods that allow us to remove all instances of a certain character (both upper and lowercase) in a string.
-// 5. Print to console the newString variable within the function.
-// 6. Run the function.
+// Overall goal: Take an array of multple strings and sort them alphabetically. Then print them one by one in a sentence using string interpolation.
+// 1. Create an array with strings that are not in alphabetical order.
+// 2. Use a method to assign a new value to the array with the strings sorted alphabetically.
+// 3. Create a for loop to cycle through the array.
+// 4. Within the for loop, log to the console a sentence and use string interpolation to embed each element of the array.
 
-var string = "Sally sold seashells by the seashore"
+var destinations = ["Portugal", "Colorado", "New Zealand", "Bali"]
 
-function sRemove(string) {
-  var newString = string.replace(/s/gi, "");
-  console.log(newString);
+destinations.sort()
+
+for (i = 0; i < destinations.length; i++) {
+  console.log(`The next place I want to visit is ${destinations[i]}`)
 }
-
-sRemove(string);
